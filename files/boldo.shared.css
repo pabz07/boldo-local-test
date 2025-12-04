@@ -2102,7 +2102,7 @@ textarea.w-input, textarea.w-select {
 
 .w-checkbox-input--inputType-custom.w--redirected-checked {
   background-color: #3898ec;
-  background-image: url("https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg");
+  background-image: url("/images/custom-checkbox-checkmark.589d534424.svg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2127,6 +2127,12 @@ textarea.w-input, textarea.w-select {
 .w-form-formradioinput--inputType-custom.w--redirected-checked {
   border-width: 4px;
   border-color: #3898ec;
+}
+
+.w-backgroundvideo-backgroundvideoplaypausebutton:focus-visible {
+  outline-offset: 2px;
+  border-radius: 50%;
+  outline: 2px solid #3b79c3;
 }
 
 .w-layout-blockcontainer {
@@ -2773,7 +2779,7 @@ blockquote {
 }
 
 .list-item {
-  background-image: url("https://cdn.prod.website-files.com/61f3090502b5c6b41663e657/61f410529a2daf857b06fb49_bullet.png");
+  background-image: url("/images/61f410529a2daf857b06fb49_bullet.png");
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: 36px 36px;
@@ -3951,13 +3957,13 @@ blockquote {
 }
 
 .grid---light {
-  background-image: url("https://cdn.prod.website-files.com/61f3090502b5c6b41663e657/61f3090502b5c6355863e6a4_grid.png");
+  background-image: url("/images/61f3090502b5c6355863e6a4_grid.png");
   background-position: 0 0;
   background-size: 100%;
 }
 
 .grid---dark {
-  background-image: url("https://cdn.prod.website-files.com/61f3090502b5c6b41663e657/61f3090502b5c65fe663e6ad_grid-reverse.png");
+  background-image: url("/images/61f3090502b5c65fe663e6ad_grid-reverse.png");
   background-position: 0 0;
   background-size: 100%;
 }
@@ -4243,7 +4249,7 @@ blockquote {
 }
 
 .background---ellipse-dark {
-  background-image: url("https://cdn.prod.website-files.com/61f3090502b5c6b41663e657/61f32a85821be6bd8f6e55d3_Ellipse%209.png");
+  background-image: url("/images/61f32a85821be6bd8f6e55d3_Ellipse%209.png");
   background-position: 100% 0;
   background-repeat: no-repeat;
   background-size: 43%;
@@ -4444,7 +4450,7 @@ blockquote {
 }
 
 .background---cta {
-  background-image: url("https://cdn.prod.website-files.com/61f3090502b5c6b41663e657/61f451180502f917a7c1d910_Ellipse%209.svg");
+  background-image: url("/images/61f451180502f917a7c1d910_Ellipse%209.svg");
   background-position: 100% 0;
   background-repeat: no-repeat;
   background-size: 60%;
@@ -4469,7 +4475,7 @@ blockquote {
 }
 
 .background---ellipse-white {
-  background-image: url("https://cdn.prod.website-files.com/61f3090502b5c6b41663e657/61f9acfc0e412515f3b39739_Ellipse-white.svg");
+  background-image: url("/images/61f9acfc0e412515f3b39739_Ellipse-white.svg");
   background-position: 100% 0;
   background-repeat: no-repeat;
   background-size: 43%;
