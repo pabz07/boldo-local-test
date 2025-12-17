@@ -112,26 +112,52 @@
       }
     }
     function createButton({ color, text_color, text, position }) {
-      const btn = document.createElement('button');
+      const btn = document.createElement('div');
       btn.id = 'llmo-chat-button';
-      btn.innerHTML = `<span class="ai-icon" style="height:30px;width:30px;display:flex;align-items:center;justify-content:center;margin:0;border-radius:100%;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 113 113" fill="none" style="height:16px;width:16px;">
-          <path d="M56.5686 0.627859C61.3394 0.627859 63.1685 26.4396 74.9331 38.2041C86.6976 49.9686 112.509 51.7978 112.509 56.5685C112.509 61.3393 86.6976 63.1685 74.933 74.933C63.1685 86.6975 61.3394 112.509 56.5686 112.509C51.7978 112.509 49.9687 86.6975 38.2042 74.933C26.4396 63.1685 0.627918 61.3393 0.62792 56.5685C0.627922 51.7978 26.4396 49.9686 38.2042 38.2041C49.9687 26.4396 51.7978 0.627859 56.5686 0.627859Z" fill="${text_color}"/>
+      btn.innerHTML = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 85 85" fill="none" style="position: absolute;left: 24px;">
+            <path d="M42.4265 0.470894C46.0046 0.470894 47.3764 19.8297 56.1999 28.6531C65.0233 37.4765 84.382 38.8483 84.382 42.4264C84.382 46.0045 65.0233 47.3763 56.1998 56.1997C47.3764 65.0231 46.0046 84.3819 42.4265 84.3819C38.8484 84.3819 37.4766 65.0231 28.6532 56.1997C19.8298 47.3763 0.470998 46.0045 0.471 42.4264C0.471001 38.8483 19.8298 37.4765 28.6532 28.6531C37.4766 19.8297 38.8484 0.470894 42.4265 0.470894Z" fill="#e5e7eb"></path>
         </svg>
-      </span> ${text}`;
+        <input placeholder="${text}" readonly style="
+          border-radius: 12px;
+          background: #FFF;
+          border: 1px solid #e5e7eb;
+          min-height: 24px;
+          width: 280px;
+          outline: 0;
+          color: ${text_color};
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          padding: 14px 16px 12px 38px;
+        ">
+      `;
       btn.title = "Chat with AI";
       btn.type = "button";
       Object.assign(btn.style, {
-        display: "flex", alignItems: "center", gap: "8px",
-        backgroundColor: color, position: "fixed",
-        bottom: position.bottom, right: position.right,
-        zIndex: "9998", color: text_color, border: "none",
-        boxShadow: "0 2px 16px #0001", borderRadius: "2px",
-        fontSize: "15px", padding: "8px 18px 8px 12px", cursor: "pointer",
-        letterSpacing: "1px", height: "46px", lineHeight: "0",
-        filter: "brightness(100%)", transition: "background .15s, filter .15s"
+        display: "flex", 
+        alignItems: "center",
+        position: "fixed",
+        bottom: position.bottom, 
+        right: position.right,
+        zIndex: "9998", 
+        // color: text_color,
+        boxShadow: "rgba(0, 0, 0, 0.067) 0px 2px 16px",
+        borderRadius: "2px",
+        fontSize: "15px", 
+        padding: "8px", 
+        cursor: "pointer",
+        letterSpacing: "1px",
+        lineHeight: "0",
+        filter: "brightness(100%)", 
+        transition: "background .15s, filter .15s",
+        backdropFilter: "blur(4px)",
+        background: "rgba(0, 0, 0, 0)",
+        borderRadius: "16px",
+        border: "1px solid rgba(255, 255, 255, 0)"
       });
-      btn.onmouseover = () => (btn.style.filter = "brightness(90%)");
+      btn.onmouseover = () => (btn.style.filter = "brightness(98%)");
       btn.onmouseout  = () => (btn.style.filter = "brightness(100%)");
       return btn;
     }
@@ -140,10 +166,12 @@
       iframe.id = 'llmo-chat-iframe';
       iframe.style.display = "none";
       iframe.style.position = "fixed";
-      iframe.style.background = "#fff";
+      iframe.style.background = "rgba(0,0,0,0)";
       iframe.style.zIndex = "9999";
       iframe.style.border = "none";
       iframe.style.boxShadow = "0 2px 24px #0002";
+      iframe.style.backdropFilter = "blur(4px)";
+      iframe.style.padding = "8px";
       iframe.style.transition = "all .3s cubic-bezier(.4,0,.2,1)";
       iframe.allow = "clipboard-write";
       setIframeStyles(iframe);
