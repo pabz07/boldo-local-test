@@ -11,7 +11,7 @@
     S.base_url ||
     (window.location.hostname === "localhost"
       ? "http://localhost:3000"
-      : "https://aeo.press");
+      : "https://app.aeo.press");
 
   const ORG_ID = S.organization_id ?? null;
 
@@ -305,7 +305,7 @@
     S.base_url ||
     (window.location.hostname === "localhost"
       ? "http://localhost:3000"
-      : "https://aeo.press");
+      : "https://app.aeo.press");
 
   const ORG_ID = S.organization_id ?? null;
 
